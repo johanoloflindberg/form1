@@ -46,3 +46,15 @@
   width: 60%;
 }
 </style>
+
+<script>
+  document.querySelector('form[name="contact"]').addEventListener('submit', function (e) {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    if (!name || !email) {
+      alert('Name and Email are required fields.');
+      e.preventDefault(); // Prevent form submission
+    }
+  });
+</script>
